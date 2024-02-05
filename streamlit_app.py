@@ -16,6 +16,23 @@ st.write(pd.DataFrame({
 }))
 
 
+# Title of the form
+st.title('User Information Form')
+
+# Using form and form submission button to group the inputs
+with st.form(key='user_info_form'):
+    name = st.text_input(label='Name')
+    age = st.number_input(label='Age', min_value=0, max_value=100, step=1)
+    birthday = st.date_input(label='Birthday')
+    favorite_color = st.selectbox(label='Favorite Color', options=['Red', 'Green', 'Blue'])
+    hobbies = st.multiselect(label='Hobbies', options=['Reading', 'Traveling', 'Cooking', 'Other'])
+    
+    # Form submit button
+    submitted = st.form_submit_button('Submit')
+    if submitted:
+        st.write('Thank you for submitting the form.')
+        # Process the data here (e.g., store it, send it somewhere, etc.)
+
 """
 # Welcome to Streamlit!
 
