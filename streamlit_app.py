@@ -11,8 +11,8 @@ Here's our first attempt at using data to create a table:
 
 st.write("Here's our first attempt at using data to create a table:")
 st.write(pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
+    'first column': [1, 2, 3, 5],
+    'second column': [10, 20, 30, 50]
 }))
 
 
